@@ -15,7 +15,7 @@ new (function() {
 	};
 	
 	ext.setDigital = function(setting) {
-		var url = "http://192.168.1.102/gpio1/" + setting;
+		var url = "http://192.168.2.102/gpio1/" + setting;
 		console.log('setting' + setting);
 		$.ajax({
 			type: 'POST',
