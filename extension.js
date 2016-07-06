@@ -14,7 +14,7 @@ new (function() {
 		return {status:2, msg:'Ready'};
 	};
 	
-	ext.setDigital(url, setting) {
+	ext.setDigital = function(url, setting) {
 		console.log('url ' + url);
 		console.log('setting' + setting);
 		$.ajax({
