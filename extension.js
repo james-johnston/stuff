@@ -8,7 +8,7 @@ new (function() {
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Link-Opener-extension'
 	};
 	
-	var url = window.location.href;
+	var siteUrl = window.location.href;
 	
 	ext._shutdown = function() {};
 	
@@ -23,7 +23,7 @@ new (function() {
 			type: 'POST',
 			url: url,
 			success: function(response) {
-				alert(url);
+				alert(siteUrl);
 			}
 		});
 	};
