@@ -3,7 +3,7 @@ new (function() {
 	var descriptor = {
 		blocks: [
 			[' ', 'open link %s in new window', 'openLinkNewTab', 'http://scratch.mit.edu/'],
-			[' ', 'digital pin 1 setting %n', 'setDigital', 'http://192.168.0.18/gpio2/1'],
+			[' ', 'digital pin 1 setting %n', 'setDigital', '0'],
 		],
 		url: 'https://github.com/savaka2/scratch-extensions/wiki/Link-Opener-extension'
 	};
@@ -14,8 +14,8 @@ new (function() {
 		return {status:2, msg:'Ready'};
 	};
 	
-	ext.setDigital = function(url, setting) {
-		console.log('url ' + url);
+	ext.setDigital = function(setting) {
+		var url = "http://192.168.1.102/gpio1/" + setting;
 		console.log('setting' + setting);
 		$.ajax({
 			type: 'POST',
